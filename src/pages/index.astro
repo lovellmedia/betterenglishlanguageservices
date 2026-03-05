@@ -1,0 +1,174 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const title = "Better English Language Services - English Learning & Teaching Research";
+const description = "Research-backed insights into English language learning and teaching, covering Second Language Acquisition Theory and evidence-based instructional methods.";
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+---
+
+<BaseLayout title={title} description={description} canonicalURL={canonicalURL}>
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Better English Language Services</h1>
+      <p class="tagline">Research-Backed English Language Learning & Teaching</p>
+      <p class="subtitle">Explore evidence-based approaches to language acquisition, teaching methodology, and professional development.</p>
+    </div>
+  </section>
+
+  <section class="featured-topic">
+    <h2>Featured Topic: Second Language Acquisition Theory</h2>
+    <p>Discover the science behind how people learn languages. Understand the cognitive processes, theoretical frameworks, and evidence-based practices that drive successful language learning.</p>
+    <div class="pillar-cards">
+      <div class="card">
+        <h3><a href="/second-language-acquisition-theory/">Overview</a></h3>
+        <p>Introduction to SLA theory, key concepts, and how understanding language acquisition improves teaching and learning outcomes.</p>
+      </div>
+      <div class="card">
+        <h3><a href="/second-language-acquisition-theory/history/">History & Evolution</a></h3>
+        <p>Trace the development of SLA from Krashen's Monitor Model through modern usage-based approaches and neuroscience insights.</p>
+      </div>
+      <div class="card">
+        <h3><a href="/second-language-acquisition-theory/technical-deep-dive/">Technical Deep-Dive</a></h3>
+        <p>Explore cognitive mechanisms: working memory, attention, automaticity, and the role of Universal Grammar in language learning.</p>
+      </div>
+      <div class="card">
+        <h3><a href="/second-language-acquisition-theory/ontology/">Ontology & Knowledge Base</a></h3>
+        <p>Comprehensive glossary of 50+ SLA terms, taxonomy of learning conditions, and structured definitions of major theories.</p>
+      </div>
+      <div class="card">
+        <h3><a href="/second-language-acquisition-theory/trends/">Current Trends & Future Outlook</a></h3>
+        <p>Emerging research in corpus linguistics, neuroscience, AI-personalized learning, and the future of language instruction.</p>
+      </div>
+      <div class="card">
+        <h3><a href="/second-language-acquisition-theory/tools/">Tools & Resources</a></h3>
+        <p>Interactive tools: Interlanguage Analyzer, Learning Condition Matcher, and Vocabulary Acquisition Calculator.</p>
+      </div>
+      <div class="card">
+        <h3><a href="/second-language-acquisition-theory/challenges/">Common Challenges & Solutions</a></h3>
+        <p>Address learner frustrations and teacher challenges with SLA-backed explanations and evidence-based solutions.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="about">
+    <h2>About This Site</h2>
+    <p>Better English Language Services is dedicated to providing research-backed, comprehensive resources for English language learners and teachers. Our content is grounded in Second Language Acquisition theory, applied linguistics research, and decades of pedagogical practice.</p>
+    <p>Whether you're a language learner seeking to understand how you acquire language, a teacher looking to improve your instructional methods, or a researcher exploring the science of language learning, you'll find evidence-based insights and practical applications here.</p>
+  </section>
+
+  <style>
+    .hero {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      padding: 4rem 2rem;
+      text-align: center;
+      border-radius: 8px;
+      margin-bottom: 3rem;
+    }
+
+    .hero-content h1 {
+      color: white;
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .tagline {
+      font-size: 1.3rem;
+      margin-bottom: 1rem;
+      font-weight: 500;
+    }
+
+    .subtitle {
+      font-size: 1.1rem;
+      opacity: 0.95;
+    }
+
+    .featured-topic {
+      margin: 3rem 0;
+    }
+
+    .featured-topic h2 {
+      text-align: center;
+      margin-bottom: 1rem;
+      font-size: 2rem;
+    }
+
+    .featured-topic > p {
+      text-align: center;
+      font-size: 1.1rem;
+      margin-bottom: 2rem;
+      color: #555;
+    }
+
+    .pillar-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      margin: 2rem 0;
+    }
+
+    .card {
+      background: white;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 1.5rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+    }
+
+    .card h3 {
+      margin-top: 0;
+      margin-bottom: 0.5rem;
+    }
+
+    .card h3 a {
+      color: #667eea;
+    }
+
+    .card h3 a:hover {
+      color: #764ba2;
+      text-decoration: none;
+    }
+
+    .card p {
+      color: #666;
+      font-size: 0.95rem;
+      margin: 0;
+    }
+
+    .about {
+      background: #f0f4ff;
+      padding: 2rem;
+      border-radius: 8px;
+      margin-top: 3rem;
+    }
+
+    .about h2 {
+      color: #667eea;
+    }
+
+    .about p {
+      color: #555;
+      line-height: 1.8;
+    }
+
+    @media (max-width: 768px) {
+      .hero-content h1 {
+        font-size: 1.8rem;
+      }
+
+      .tagline {
+        font-size: 1.1rem;
+      }
+
+      .pillar-cards {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</BaseLayout>

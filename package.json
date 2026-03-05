@@ -1,0 +1,19 @@
+{
+  "name": "betterenglishlanguageservices",
+  "version": "0.0.1",
+  "description": "Technical research site on English language learning and teaching methods",
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview"
+  },
+  "dependencies": {
+    "astro": "^4.0.0",
+    "astro-seo": "^1.1.0",
+    "@astrojs/sitemap": "^3.7.0"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.58.2"
+  }
+}

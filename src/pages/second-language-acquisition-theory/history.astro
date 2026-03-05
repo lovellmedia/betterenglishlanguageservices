@@ -1,0 +1,162 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const title = "SLA Theory History & Evolution";
+const description = "Trace the development of Second Language Acquisition theory from Krashen's Monitor Model through modern neuroscience-informed approaches.";
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+---
+
+<BaseLayout title={title} description={description} canonicalURL={canonicalURL}>
+  <article>
+    <h1>History & Evolution of SLA Theory</h1>
+    
+    <section>
+      <h2>The Foundations: 1970s-1980s</h2>
+      <p>Stephen Krashen's work in the late 1970s and early 1980s revolutionized language teaching. His Monitor Model proposed that acquisition and learning are distinct processes, with acquisition being the primary driver of communicative ability. Krashen's Input Hypothesis—the idea that comprehensible input is essential for acquisition—became foundational to communicative language teaching.</p>
+      <p>While later research challenged some of Krashen's specific claims, his emphasis on meaningful input and the importance of affective factors transformed language pedagogy from grammar-focused to communication-focused approaches.</p>
+    </section>
+
+    <section>
+      <h2>The Interaction Era: 1980s-1990s</h2>
+      <p>Researchers like Susan Gass, Michael Long, and Alison Mackey challenged the sufficiency of input alone. The Interaction Hypothesis proposed that interaction—negotiation of meaning, feedback, and modified output—drives acquisition. This period saw growing recognition that learners must actively engage with language, not passively receive it.</p>
+      <p>Merrill Swain's Output Hypothesis added that producing language forces learners to process language more deeply and test hypotheses about the target language. This shift from input-only to input-interaction-output frameworks reflected a more nuanced understanding of acquisition processes.</p>
+    </section>
+
+    <section>
+      <h2>Cognitive and Sociocultural Perspectives: 1990s-2000s</h2>
+      <p>As cognitive science advanced, SLA researchers increasingly examined the mental processes underlying language acquisition. Working memory, attention, and automaticity became central concepts. Researchers explored how learners process grammar, vocabulary, and pronunciation at cognitive and neural levels.</p>
+      <p>Simultaneously, sociocultural perspectives—influenced by Vygotsky's work—emphasized the social and cultural contexts of language learning. This perspective highlighted how interaction with more proficient speakers, scaffolding, and cultural identity shape acquisition.</p>
+    </section>
+
+    <section>
+      <h2>Modern Approaches: 2000s-Present</h2>
+      <p>Contemporary SLA research integrates multiple perspectives. Usage-based approaches propose that language structure emerges from patterns in language use. Corpus linguistics reveals authentic patterns in how native speakers use language, informing what and how to teach.</p>
+      <p>Neuroscience has begun illuminating the brain mechanisms of language learning. Neuroimaging studies show how the brain processes language and how this changes with proficiency. Research on neuroplasticity demonstrates that adult brains remain capable of substantial language learning.</p>
+      <p>Technology has opened new research avenues: eye-tracking reveals what learners attend to, keystroke logging shows writing processes, and large-scale corpus analysis identifies patterns in millions of words of language use.</p>
+    </section>
+
+    <section>
+      <h2>Key Researchers and Their Contributions</h2>
+      <ul>
+        <li><strong>Stephen Krashen:</strong> Monitor Model, Input Hypothesis, acquisition-learning distinction</li>
+        <li><strong>Michael Long:</strong> Interaction Hypothesis, focus-on-form instruction</li>
+        <li><strong>Susan Gass:</strong> Interaction, intake, and the role of attention in acquisition</li>
+        <li><strong>Merrill Swain:</strong> Output Hypothesis, comprehensible output</li>
+        <li><strong>Rod Ellis:</strong> Comprehensive SLA theory synthesis, grammar learning, individual differences</li>
+        <li><strong>Diane Larsen-Freeman:</strong> Complexity theory applied to language learning, dynamic systems</li>
+        <li><strong>Paul Nation:</strong> Vocabulary acquisition, frequency-based learning</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Theoretical Shifts</h2>
+      <p>SLA theory has undergone several major shifts:</p>
+      <ul>
+        <li><strong>From form to meaning:</strong> Early approaches focused on grammatical form; modern approaches emphasize meaningful communication.</li>
+        <li><strong>From input to interaction:</strong> Recognition that interaction, not passive input, drives acquisition.</li>
+        <li><strong>From universal principles to individual differences:</strong> Early theories sought universal principles; modern research recognizes learners differ in age, aptitude, motivation, and strategy use.</li>
+        <li><strong>From classroom to multilingual contexts:</strong> Research increasingly examines language learning in multilingual societies and migration contexts.</li>
+        <li><strong>From cognitive to sociocultural:</strong> Integration of social, cultural, and identity factors alongside cognitive mechanisms.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Implications for Teaching</h2>
+      <p>This evolution has transformed language teaching. Rather than isolated grammar lessons, modern instruction provides meaningful interaction, abundant input, opportunities for output, and attention to learner individual differences. Understanding this history helps teachers appreciate why current best practices emphasize communication, interaction, and learner engagement.</p>
+      <p>For deeper exploration, see our <a href="/second-language-acquisition-theory/">overview of SLA concepts</a>, <a href="/second-language-acquisition-theory/technical-deep-dive/">technical deep-dive into cognitive mechanisms</a>, and <a href="/second-language-acquisition-theory/trends/">current trends and future directions</a>.</p>
+    </section>
+
+    <section class="sources">
+      <h2>Key Sources</h2>
+      <ul>
+        <li>Krashen, S. D. (1982). <em>Principles and Practice in Second Language Acquisition</em>. Pergamon Press.</li>
+        <li>Long, M. H. (1996). The role of the linguistic environment in second language acquisition. In W. C. Ritchie & T. K. Bhatia (Eds.), <em>Handbook of second language acquisition</em> (pp. 413-468). Academic Press.</li>
+        <li>Gass, S. M., & Mackey, A. (2020). <em>Second Language Acquisition: An Introductory Course</em> (5th ed.). Routledge.</li>
+        <li>Ellis, R. (2015). <em>Understanding Second Language Acquisition</em> (2nd ed.). Oxford University Press.</li>
+      </ul>
+    </section>
+  </article>
+
+  <style>
+    article {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+      color: #2c3e50;
+    }
+
+    h2 {
+      font-size: 1.5rem;
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+      color: #34495e;
+      border-bottom: 2px solid #667eea;
+      padding-bottom: 0.5rem;
+    }
+
+    section {
+      margin-bottom: 2rem;
+    }
+
+    p {
+      margin-bottom: 1rem;
+      line-height: 1.8;
+      color: #444;
+    }
+
+    ul {
+      margin-left: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    li {
+      margin-bottom: 0.5rem;
+      line-height: 1.6;
+      color: #444;
+    }
+
+    a {
+      color: #667eea;
+      text-decoration: none;
+      border-bottom: 1px dotted #667eea;
+    }
+
+    a:hover {
+      color: #764ba2;
+      border-bottom-color: #764ba2;
+    }
+
+    .sources {
+      background: #f9f9f9;
+      padding: 1.5rem;
+      border-left: 4px solid #667eea;
+      border-radius: 4px;
+      margin-top: 2rem;
+    }
+
+    .sources h2 {
+      border: none;
+      padding: 0;
+      margin-top: 0;
+    }
+
+    .sources ul {
+      list-style: none;
+      margin-left: 0;
+    }
+
+    .sources li {
+      margin-bottom: 1rem;
+      padding-left: 1rem;
+    }
+
+    .sources li:before {
+      content: "📚 ";
+      margin-right: 0.5rem;
+    }
+  </style>
+</BaseLayout>

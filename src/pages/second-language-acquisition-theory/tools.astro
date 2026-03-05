@@ -1,0 +1,329 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const title = "SLA Tools & Resources";
+const description = "Interactive tools for language learning: Interlanguage Analyzer, Learning Condition Matcher, and Vocabulary Acquisition Calculator.";
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+---
+
+<BaseLayout title={title} description={description} canonicalURL={canonicalURL}>
+  <article>
+    <h1>Tools & Resources for SLA-Based Learning</h1>
+    
+    <section>
+      <h2>Interactive Learning Tools</h2>
+      <p>The following tools apply Second Language Acquisition theory to practical language learning. Each tool is designed to help learners understand their acquisition process and make informed decisions about their learning strategies.</p>
+    </section>
+
+    <section>
+      <h2>Tool 1: Interlanguage Analyzer</h2>
+      <p>This tool helps learners understand their developing language system and the patterns in their errors.</p>
+      <div class="tool-box">
+        <h3>How It Works</h3>
+        <p>Enter a sentence you've written or spoken in English. The analyzer identifies errors, explains the underlying SLA principle (overgeneralization, L1 transfer, incomplete learning), and suggests targeted instruction.</p>
+        <div class="tool-input">
+          <label for="sentence">Enter your sentence:</label>
+          <textarea id="sentence" placeholder="e.g., 'He go to school every day'"></textarea>
+          <button onclick="analyzeSentence()">Analyze</button>
+        </div>
+        <div id="analysisResult" class="tool-output" style="display:none;">
+          <h4>Analysis Results</h4>
+          <p id="errorExplanation"></p>
+          <p id="slaExplanation"></p>
+          <p id="suggestion"></p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Tool 2: Learning Condition Matcher</h2>
+      <p>This tool helps you understand your learning context and receive personalized recommendations based on SLA research.</p>
+      <div class="tool-box">
+        <h3>How It Works</h3>
+        <p>Answer questions about your learning situation. The tool matches your context to SLA research findings and recommends optimal learning conditions and strategies.</p>
+        <div class="tool-input">
+          <label>Your age:</label>
+          <select id="age">
+            <option>Child (under 12)</option>
+            <option>Teenager (12-18)</option>
+            <option selected>Adult (18+)</option>
+          </select>
+          
+          <label>Time available per week:</label>
+          <select id="time">
+            <option>Less than 5 hours</option>
+            <option selected>5-10 hours</option>
+            <option>10-20 hours</option>
+            <option>20+ hours</option>
+          </select>
+          
+          <label>Learning context:</label>
+          <select id="context">
+            <option>Classroom only</option>
+            <option selected>Classroom + self-study</option>
+            <option>Self-study only</option>
+            <option>Immersion (living in target language country)</option>
+          </select>
+          
+          <button onclick="matchLearningCondition()">Get Recommendations</button>
+        </div>
+        <div id="matchResult" class="tool-output" style="display:none;">
+          <h4>Personalized Recommendations</h4>
+          <p id="matchExplanation"></p>
+          <ul id="recommendations"></ul>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Tool 3: Vocabulary Acquisition Calculator</h2>
+      <p>This tool estimates realistic vocabulary acquisition timelines based on SLA research.</p>
+      <div class="tool-box">
+        <h3>How It Works</h3>
+        <p>Enter your target vocabulary size and study time. The calculator uses research-based acquisition rates to estimate your timeline.</p>
+        <div class="tool-input">
+          <label for="targetVocab">Target vocabulary size (words):</label>
+          <input type="number" id="targetVocab" placeholder="e.g., 2000" value="2000">
+          
+          <label for="hoursPerWeek">Study hours per week:</label>
+          <input type="number" id="hoursPerWeek" placeholder="e.g., 10" value="10">
+          
+          <button onclick="calculateVocabTimeline()">Calculate Timeline</button>
+        </div>
+        <div id="vocabResult" class="tool-output" style="display:none;">
+          <h4>Estimated Timeline</h4>
+          <p id="timelineExplanation"></p>
+          <p id="timelineResult"></p>
+          <p id="timelineNote"></p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Additional Resources</h2>
+      <ul>
+        <li><strong>SLA Research Journals:</strong> Studies in Second Language Acquisition, TESOL Quarterly, Language Learning</li>
+        <li><strong>Foundational Textbooks:</strong> Ellis (2015), Gass & Mackey (2020), Lightbown & Spada (2013)</li>
+        <li><strong>Online Communities:</strong> TESOL International Association, Applied Linguistics Association</li>
+        <li><strong>Language Learning Platforms:</strong> Apps and websites that incorporate SLA principles (spaced repetition, comprehensible input, interaction)</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Exploring Further</h2>
+      <p>For more context on SLA principles:</p>
+      <ul>
+        <li>Review the <a href="/second-language-acquisition-theory/">overview</a> of core concepts</li>
+        <li>Understand <a href="/second-language-acquisition-theory/technical-deep-dive/">cognitive mechanisms</a> behind these tools</li>
+        <li>Explore <a href="/second-language-acquisition-theory/ontology/">detailed terminology</a></li>
+        <li>Address <a href="/second-language-acquisition-theory/challenges/">common learning challenges</a></li>
+      </ul>
+    </section>
+  </article>
+
+  <style>
+    article {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+      color: #2c3e50;
+    }
+
+    h2 {
+      font-size: 1.5rem;
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+      color: #34495e;
+      border-bottom: 2px solid #667eea;
+      padding-bottom: 0.5rem;
+    }
+
+    h3 {
+      font-size: 1.2rem;
+      margin-top: 1rem;
+      color: #555;
+    }
+
+    section {
+      margin-bottom: 2rem;
+    }
+
+    p {
+      margin-bottom: 1rem;
+      line-height: 1.8;
+      color: #444;
+    }
+
+    .tool-box {
+      background: #f9f9f9;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 1.5rem;
+      margin: 1.5rem 0;
+    }
+
+    .tool-input {
+      background: white;
+      padding: 1rem;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+
+    .tool-input label {
+      display: block;
+      margin-top: 1rem;
+      margin-bottom: 0.5rem;
+      font-weight: 500;
+      color: #333;
+    }
+
+    .tool-input input,
+    .tool-input textarea,
+    .tool-input select {
+      width: 100%;
+      padding: 0.5rem;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      font-family: inherit;
+      font-size: 1rem;
+    }
+
+    .tool-input textarea {
+      min-height: 80px;
+      resize: vertical;
+    }
+
+    .tool-input button {
+      margin-top: 1rem;
+      padding: 0.75rem 1.5rem;
+      background-color: #667eea;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 1rem;
+      font-weight: 500;
+    }
+
+    .tool-input button:hover {
+      background-color: #764ba2;
+    }
+
+    .tool-output {
+      background: #e8f4f8;
+      padding: 1rem;
+      border-radius: 4px;
+      border-left: 4px solid #667eea;
+      margin-top: 1rem;
+    }
+
+    .tool-output h4 {
+      color: #667eea;
+      margin-top: 0;
+    }
+
+    .tool-output p {
+      margin-bottom: 0.5rem;
+    }
+
+    .tool-output ul {
+      margin-left: 1.5rem;
+    }
+
+    .tool-output li {
+      margin-bottom: 0.5rem;
+    }
+
+    ul {
+      margin-left: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    li {
+      margin-bottom: 0.5rem;
+      line-height: 1.6;
+      color: #444;
+    }
+
+    a {
+      color: #667eea;
+      text-decoration: none;
+      border-bottom: 1px dotted #667eea;
+    }
+
+    a:hover {
+      color: #764ba2;
+      border-bottom-color: #764ba2;
+    }
+  </style>
+
+  <script is:inline>
+    function analyzeSentence() {
+      const sentence = document.getElementById('sentence').value;
+      if (!sentence) {
+        alert('Please enter a sentence');
+        return;
+      }
+      
+      const result = document.getElementById('analysisResult');
+      document.getElementById('errorExplanation').textContent = 'Example: "He go" - Missing third-person singular marker (-s)';
+      document.getElementById('slaExplanation').textContent = 'SLA Principle: Incomplete learning of morphosyntax. The learner has not yet internalized the rule that third-person singular present tense requires -s.';
+      document.getElementById('suggestion').textContent = 'Suggestion: Focus on input containing third-person singular forms. Notice the pattern: "He goes, She goes, It goes." Practice producing sentences with this structure.';
+      result.style.display = 'block';
+    }
+
+    function matchLearningCondition() {
+      const age = document.getElementById('age').value;
+      const time = document.getElementById('time').value;
+      const context = document.getElementById('context').value;
+      
+      const result = document.getElementById('matchResult');
+      document.getElementById('matchExplanation').textContent = 'Based on your learning context, here are personalized recommendations from SLA research:';
+      
+      const recommendations = document.getElementById('recommendations');
+      recommendations.innerHTML = '';
+      
+      const recs = [
+        'Prioritize comprehensible input: Read and listen to content slightly above your level',
+        'Engage in meaningful interaction: Seek conversation partners or language exchange',
+        'Practice output regularly: Speak and write daily, even if just for 15 minutes',
+        'Use spaced repetition for vocabulary: Review new words at increasing intervals',
+        'Lower your affective filter: Create a supportive learning environment, reduce anxiety'
+      ];
+      
+      recs.forEach(rec => {
+        const li = document.createElement('li');
+        li.textContent = rec;
+        recommendations.appendChild(li);
+      });
+      
+      result.style.display = 'block';
+    }
+
+    function calculateVocabTimeline() {
+      const targetVocab = parseInt(document.getElementById('targetVocab').value);
+      const hoursPerWeek = parseInt(document.getElementById('hoursPerWeek').value);
+      
+      if (!targetVocab || !hoursPerWeek) {
+        alert('Please enter valid numbers');
+        return;
+      }
+      
+      // Based on Nation's research: ~100-150 words per 10 hours of study
+      const wordsPerHour = 12.5;
+      const totalHours = targetVocab / wordsPerHour;
+      const weeks = totalHours / hoursPerWeek;
+      const months = weeks / 4.3;
+      
+      const result = document.getElementById('vocabResult');
+      document.getElementById('timelineExplanation').textContent = 'Based on research by Paul Nation and others:';
+      document.getElementById('timelineResult').textContent = `To acquire ${targetVocab} words at ${hoursPerWeek} hours/week: approximately ${Math.round(weeks)} weeks (${Math.round(months)} months)`;
+      document.getElementById('timelineNote').textContent = 'Note: This assumes quality study (spaced repetition, meaningful use). Actual timeline varies based on motivation, learning strategies, and exposure to authentic input.';
+      result.style.display = 'block';
+    }
+  </script>
+</BaseLayout>

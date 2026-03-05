@@ -1,0 +1,174 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const title = "SLA Technical Deep-Dive: Cognitive Mechanisms";
+const description = "Explore the cognitive mechanisms underlying language acquisition: working memory, attention, automaticity, and the role of Universal Grammar.";
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+---
+
+<BaseLayout title={title} description={description} canonicalURL={canonicalURL}>
+  <article>
+    <h1>Technical Deep-Dive: Cognitive Mechanisms in SLA</h1>
+    
+    <section>
+      <h2>Working Memory and Language Processing</h2>
+      <p>Working memory—the cognitive system that temporarily holds and manipulates information—is fundamental to language processing. When learners encounter new language, working memory must hold the sounds or written forms, access meanings from long-term memory, and integrate this information with context.</p>
+      <p>Working memory has limited capacity: typically 4-7 items simultaneously. This constraint explains why complex sentences challenge learners and why breaking input into manageable chunks facilitates comprehension. As learners practice, language processing becomes more automatic, freeing working memory resources for higher-level comprehension and production.</p>
+    </section>
+
+    <section>
+      <h2>Attention and Noticing</h2>
+      <p>Attention is selective: we cannot consciously process all available information. In language learning, attention determines what learners notice and potentially acquire. The Noticing Hypothesis proposes that learners must consciously notice a gap between their interlanguage and the target language to progress.</p>
+      <p>This has practical implications: explicit instruction that draws attention to form can facilitate learning, especially for complex structures. However, attention is limited, so instruction must balance attention to form with meaningful communication.</p>
+    </section>
+
+    <section>
+      <h2>Automaticity and Skill Development</h2>
+      <p>Language use involves both controlled and automatic processes. Beginning learners rely heavily on controlled processing—consciously thinking about grammar rules and vocabulary. With practice, frequently used language becomes automatic, requiring minimal conscious attention.</p>
+      <p>Automaticity develops through repeated, meaningful practice. Learners who engage in extensive reading and listening develop automatic recognition of common patterns. Those who produce language frequently develop automatic production of common phrases and structures. This progression from controlled to automatic processing is essential for fluent communication.</p>
+    </section>
+
+    <section>
+      <h2>Implicit vs. Explicit Knowledge</h2>
+      <p>Implicit knowledge is unconscious, intuitive understanding of language rules. Native speakers have extensive implicit knowledge: they know that "He go" is incorrect without consciously knowing why. Explicit knowledge is conscious awareness of rules.</p>
+      <p>Research suggests that explicit knowledge can support implicit knowledge development. Explicit instruction can direct attention to forms that learners might otherwise miss, facilitating implicit learning. However, explicit knowledge alone does not guarantee fluent use; learners must develop implicit knowledge through practice.</p>
+    </section>
+
+    <section>
+      <h2>Universal Grammar and Language Universals</h2>
+      <p>Noam Chomsky's Universal Grammar theory proposes that humans have innate linguistic knowledge—a universal set of principles underlying all human languages. This explains how children acquire complex grammar with limited input and why certain structures appear across languages.</p>
+      <p>For second language learners, the role of Universal Grammar is debated. Some researchers argue that adult learners can access Universal Grammar, explaining why certain structures are easier to learn than others. Others propose that adult learners rely more on general cognitive abilities and explicit learning. The truth likely involves both: Universal Grammar may provide some guidance, but adult learners also employ general learning mechanisms.</p>
+    </section>
+
+    <section>
+      <h2>Transfer and Interference</h2>
+      <p>Learners' native language influences second language acquisition. Positive transfer occurs when native language structures facilitate target language learning (e.g., English speakers learning Dutch find many cognates). Negative transfer (interference) occurs when native language structures conflict with target language structures, leading to errors.</p>
+      <p>The degree of transfer depends on language distance: speakers of languages similar to the target language experience more positive transfer. Learners of typologically distant languages face more interference. Understanding transfer helps teachers anticipate learner errors and provide targeted instruction.</p>
+    </section>
+
+    <section>
+      <h2>Declarative vs. Procedural Memory</h2>
+      <p>Cognitive psychology distinguishes between declarative memory (conscious, fact-based knowledge) and procedural memory (unconscious, skill-based knowledge). Language learning involves both: learners consciously memorize vocabulary (declarative) and develop automatic language use skills (procedural).</p>
+      <p>The declarative-procedural model of language learning proposes that learners initially rely on declarative memory for language rules, then gradually convert this knowledge to procedural memory through practice. This explains why explicit instruction can help initially, but extensive practice is necessary for fluent use.</p>
+    </section>
+
+    <section>
+      <h2>The Critical Period Hypothesis</h2>
+      <p>The Critical Period Hypothesis proposes that there is a biologically determined window—typically ending in early adolescence—during which language acquisition is easiest. Evidence supports this for pronunciation and some grammatical structures: children typically achieve native-like pronunciation more easily than adults.</p>
+      <p>However, adults can achieve high proficiency in second languages through focused effort and effective instruction. While adult learners may not achieve native-like pronunciation, they can develop excellent communicative ability. The critical period appears to be more of a gradual decline in certain abilities rather than a sharp cutoff.</p>
+    </section>
+
+    <section>
+      <h2>Neuroplasticity and Adult Language Learning</h2>
+      <p>Neuroscience research reveals that adult brains remain plastic—capable of substantial reorganization and learning. Neuroimaging studies show that language learning activates multiple brain regions and that intensive practice can produce measurable changes in brain structure and function.</p>
+      <p>This research provides hope for adult language learners: while the brain changes with age, it retains the capacity for language learning. Intensive, meaningful practice can produce lasting changes in neural organization supporting language use.</p>
+    </section>
+
+    <section>
+      <h2>Implications for Instruction</h2>
+      <p>Understanding these cognitive mechanisms informs effective instruction:</p>
+      <ul>
+        <li>Manage working memory load by breaking complex input into manageable chunks</li>
+        <li>Draw attention to important forms through explicit instruction and input enhancement</li>
+        <li>Provide extensive practice to develop automaticity and fluency</li>
+        <li>Balance explicit instruction with implicit learning through meaningful practice</li>
+        <li>Anticipate transfer and interference based on learners' native languages</li>
+        <li>Recognize that adult learners can achieve high proficiency through focused effort</li>
+      </ul>
+      <p>For more context, explore our <a href="/second-language-acquisition-theory/">overview</a>, <a href="/second-language-acquisition-theory/history/">history of SLA theory</a>, and <a href="/second-language-acquisition-theory/ontology/">detailed terminology</a>.</p>
+    </section>
+
+    <section class="sources">
+      <h2>Key Sources</h2>
+      <ul>
+        <li>Baddeley, A. (2003). Working memory: Looking back and looking forward. <em>Review of General Psychology, 7</em>(2), 85-100.</li>
+        <li>Schmidt, R. (1990). The role of consciousness in second language learning. <em>Applied Linguistics, 11</em>(2), 129-158.</li>
+        <li>Ellis, R. (2015). <em>Understanding Second Language Acquisition</em> (2nd ed.). Oxford University Press.</li>
+        <li>Ullman, M. T. (2005). A cognitive neuroscience perspective on second language acquisition. <em>Handbook of bilingualism: Psycholinguistic approaches, 30</em>, 104-122.</li>
+      </ul>
+    </section>
+  </article>
+
+  <style>
+    article {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+      color: #2c3e50;
+    }
+
+    h2 {
+      font-size: 1.5rem;
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+      color: #34495e;
+      border-bottom: 2px solid #667eea;
+      padding-bottom: 0.5rem;
+    }
+
+    section {
+      margin-bottom: 2rem;
+    }
+
+    p {
+      margin-bottom: 1rem;
+      line-height: 1.8;
+      color: #444;
+    }
+
+    ul {
+      margin-left: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    li {
+      margin-bottom: 0.5rem;
+      line-height: 1.6;
+      color: #444;
+    }
+
+    a {
+      color: #667eea;
+      text-decoration: none;
+      border-bottom: 1px dotted #667eea;
+    }
+
+    a:hover {
+      color: #764ba2;
+      border-bottom-color: #764ba2;
+    }
+
+    .sources {
+      background: #f9f9f9;
+      padding: 1.5rem;
+      border-left: 4px solid #667eea;
+      border-radius: 4px;
+      margin-top: 2rem;
+    }
+
+    .sources h2 {
+      border: none;
+      padding: 0;
+      margin-top: 0;
+    }
+
+    .sources ul {
+      list-style: none;
+      margin-left: 0;
+    }
+
+    .sources li {
+      margin-bottom: 1rem;
+      padding-left: 1rem;
+    }
+
+    .sources li:before {
+      content: "📚 ";
+      margin-right: 0.5rem;
+    }
+  </style>
+</BaseLayout>

@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://betterenglishlanguageservices.com/sitemap-index.xml
